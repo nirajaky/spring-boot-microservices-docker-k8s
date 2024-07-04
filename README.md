@@ -64,3 +64,6 @@
 - along with the @Autowired annotation. This is useful when you have different
 - implementations of an interface or different configurations of a class.
 
+## @Builder
+- It is part of lombok dependencies, through ehich we can create Entitity Object without calling or invoking all the fields.
+
