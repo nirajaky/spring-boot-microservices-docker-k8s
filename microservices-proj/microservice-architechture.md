@@ -45,3 +45,13 @@
 - In REST Template we need to provide the method URI and Request Body of the API to call any API from one microservice to another.
 - Whereas in Feign Client, we call API of one microservices from another microservices by providing the name of microservices (service registory handles the name of microservice and call the respective API of service just by the method name). In this approch, we have one benifit as - Even if we have multiple instances of same service, this service registory handles the load balancing for communication in between the services.
 
+## Circuit Breaker
+- It helps in avoiding unneccessary call to the service.
+- Suppose Order-Service is not reachable in that case if circuit breaker is implemented at api-gateway then it breaks the call to order service from api-gateway. 
+- Circuit breaker has 3 states: closed, open, half closed.
+- In healthy scenario, circuit breaker is in closed state, when there is failure in connecting to any service circuit breaker gets into OPEN state(for an time interval defined). Its gets into HALF OPEN state when there is certain persentage success in call to the service.
+- Resileance43 is used to implement CB.
+
+## Rate-Limiter-in-api-gateway (using Resilence43 and Redis) 
+- How many number of requests are allowed per user per
+
