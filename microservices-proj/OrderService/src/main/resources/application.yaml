@@ -9,7 +9,7 @@ spring:
   application:
     name: ORDER-SERVICE
   config:
-    import: configserver:http://localhost:9296
+    import: configserver:${CONFIG_SERVER_URL:http://localhost:9296}
   datasource:
     name: order_db
     url: jdbc:mysql://${DB_HOST:localhost}:3306/orderdb
