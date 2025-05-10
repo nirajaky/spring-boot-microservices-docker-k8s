@@ -3,7 +3,7 @@ package com.nirajaky.OrderService.exception;
 import lombok.Data;
 
 @Data
-public class CustomException extends RuntimeException{
+public class CustomException extends RuntimeException {
 
     private String errorCode;
     private int status;
